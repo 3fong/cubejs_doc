@@ -32,7 +32,12 @@ To start building pre-aggregations, Cube.js requires write access to the pre-agg
 
 ### schema
 
-schema:生成和执行sql
+schema:生成和执行sql.它作为数据库的orm,可以灵活实现从简单计数到用户留存和漏斗分析的建模.
+
+
+In the example below user_id, company_id, sub and iat will be injected into the security context and will be accessible in both the SECURITY_CONTEXT and COMPILE_CONTEXT global variables in the Cube.js Data Schema.
+
+COMPILE_CONTEXT is used by Cube.js at schema compilation time, which allows changing the underlying dataset completely; whereas SECURITY_CONTEXT is used at query execution time, which simply filters the dataset with a WHERE clause. More information on these differences can be found here.
 
 需要支持功能:
 
